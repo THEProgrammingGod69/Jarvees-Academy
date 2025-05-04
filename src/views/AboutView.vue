@@ -85,17 +85,7 @@
           <p class="text-lg text-gray-600 max-w-3xl mx-auto">Meet the experts who drive our vision and ensure we deliver excellence.</p>
         </div>
 
-        <div class="flex justify-center">
-          <!-- Director -->
-          <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md max-w-md">
-            <div class="p-6">
-              <div class="w-32 h-32 rounded-full bg-gray-300 mx-auto mb-4"></div>
-              <h3 class="text-xl font-bold text-primary text-center mb-1">Rashmi Sirse</h3>
-              <p class="text-accent text-center mb-4">Director</p>
-              <p class="text-gray-600 text-center">With extensive experience in SAP implementation and training, Rashmi leads JARVEES INFOTECH with a vision to deliver excellence in SAP solutions and professional development.</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
 
