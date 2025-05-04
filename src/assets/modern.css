@@ -1,0 +1,87 @@
+/* Professional Modern UI Effects */
+
+/* Subtle Card Styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Professional Gradient Background */
+.gradient-bg {
+  background: linear-gradient(135deg, #1a202c, #2d3748);
+  background-size: 100% 100%;
+}
+
+/* Refined Hover Effect */
+.hover-scale {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* Subtle Border Highlight */
+.highlight-border {
+  border-left: 3px solid #4299e1;
+  transition: border-color 0.3s ease;
+}
+
+.highlight-border:hover {
+  border-left: 3px solid #63b3ed;
+}
+
+/* Elegant Shadow Effect */
+.elegant-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.elegant-shadow:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle Fade-in Animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Professional Button Style */
+.pro-button {
+  background: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.pro-button:hover {
+  background: #4a5568;
+  transform: translateY(-1px);
+}
+
+/* Subtle Grid Pattern */
+.subtle-pattern {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Smooth Section Transition */
+.section-transition {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}

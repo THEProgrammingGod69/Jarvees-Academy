@@ -1,0 +1,192 @@
+/* SpaceX-inspired UI Styles and Animations */
+
+/* Base Colors */
+:root {
+  --spacex-black: #000000;
+  --spacex-dark: #121212;
+  --spacex-gray: #1e1e1e;
+  --spacex-light-gray: #333333;
+  --spacex-white: #ffffff;
+  --spacex-red: #ff0000;
+  --spacex-accent: #005288;
+  --spacex-accent-hover: #007bff;
+}
+
+/* Main Background */
+.spacex-bg {
+  background-color: var(--spacex-black);
+  color: var(--spacex-white);
+}
+
+/* Gradient Overlay */
+.spacex-gradient-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+/* Star Field Background */
+.star-field {
+  background-color: var(--spacex-black);
+  background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Animated Elements */
+.spacex-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.spacex-pulse {
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.spacex-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+/* Glassmorphism */
+.spacex-glass {
+  background: rgba(30, 30, 30, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Buttons */
+.spacex-button {
+  background-color: transparent;
+  border: 2px solid var(--spacex-white);
+  color: var(--spacex-white);
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.spacex-button:hover {
+  background-color: var(--spacex-white);
+  color: var(--spacex-black);
+  transform: translateY(-2px);
+}
+
+.spacex-button.primary {
+  background-color: var(--spacex-accent);
+  border-color: var(--spacex-accent);
+}
+
+.spacex-button.primary:hover {
+  background-color: var(--spacex-accent-hover);
+  border-color: var(--spacex-accent-hover);
+  color: var(--spacex-white);
+}
+
+/* Cards */
+.spacex-card {
+  background-color: var(--spacex-gray);
+  border: 1px solid var(--spacex-light-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.spacex-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Styles */
+.spacex-title {
+  font-family: 'D-DIN', Arial, Verdana, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.spacex-subtitle {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Grid Lines */
+.spacex-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+/* Section Dividers */
+.spacex-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  margin: 3rem 0;
+}
+
+/* Form Elements */
+.spacex-input {
+  background-color: rgba(30, 30, 30, 0.5);
+  border: 1px solid var(--spacex-light-gray);
+  color: var(--spacex-white);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.spacex-input:focus {
+  border-color: var(--spacex-accent);
+  box-shadow: 0 0 0 2px rgba(0, 82, 136, 0.25);
+  outline: none;
+}
+
+/* Navigation */
+.spacex-nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.spacex-nav-link {
+  color: var(--spacex-white);
+  position: relative;
+  padding: 0.5rem 0;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.spacex-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--spacex-white);
+  transition: width 0.3s ease;
+}
+
+.spacex-nav-link:hover::after,
+.spacex-nav-link.active::after {
+  width: 100%;
+}
